@@ -1,0 +1,40 @@
+package leetcode;
+
+import java.util.Scanner;
+
+public class SmallesDivisibleDigitProduct {
+
+	public static int digProduct(int n) {
+		int product=1;
+		while(n!=0) {
+			int m=n%10;
+			product=product*m;
+			n=n/10;
+		}
+		return product;
+	}
+    public static int smallestNumber(int n, int t) {
+        if(n%10==0) {
+        	return n;
+        }
+        int ans=0;
+        for(int i=n;i<=100;i++) {
+        	int product=digProduct(i);
+        	if(product%t==0) {
+        		ans=i;
+        		break;
+        	}
+        }
+        return ans;
+
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int t=sc.nextInt();
+		System.out.println(smallestNumber(n, t));
+		sc.close();
+	}
+
+}
