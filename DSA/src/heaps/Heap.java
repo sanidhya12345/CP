@@ -13,7 +13,7 @@ public class Heap<T extends Comparable<T>> {
 		list.set(first,list.get(second));
 		list.set(second,temp);
 	}
-	//consider the one based indexing
+	//consider the zero based indexing
 	private int parent(int index) {
 		return (index-1)/2;
 	}
