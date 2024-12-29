@@ -1,0 +1,20 @@
+before binary exponentiation a naive programmer uses the O(N) logic to calculate the power which is the repeated muliplication of the base values till N.
+
+Binary Exponentiation is to calculate the pow(a,n) in the efficient manner in which we wrote the exponent in terms of binary like:
+
+pow(3,13)====> pow(3,1101)====> (3^8)*(3^4)*(3^1) by clearly seeing that only consider the bits which are set.
+
+Now we can calculate the large number powers in O(logn) tc.
+
+
+Recursive Approach to solve this:
+
+a^n={
+   1 if n==0   
+   (a^(n/2))^2 if n>0 and n is even
+   (a^(n-1/2))^2 if n>0 and n is odd
+}
+
+Binary Exponentiation in later term used in calculate the modular exponentiation.
+
+
