@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class PaypalOA {
 
-	
 	public static long getMinimumOperations(long [] arr,long n) {
 		
 		long ops=0;
@@ -40,7 +39,6 @@ public class PaypalOA {
 		}
 		System.out.println(getMinimumOperations(arr, n));
 		sc.close();
-		
 	}
 
 }
